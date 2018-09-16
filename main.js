@@ -41,7 +41,7 @@ let mainMenu = [
             {
                 label: 'Preferences...',
                 accelerator: 'Cmd+,',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-preferences');
                 }
             },
@@ -63,7 +63,7 @@ let mainMenu = [
             {
                 label: 'Check for updates',
                 accelerator: 'Cmd+U',
-                click () {
+                click() {
                     updater.checkForUpdates();
                 }
             },
@@ -71,7 +71,7 @@ let mainMenu = [
                 label: 'Quit',
                 accelerator: 'Command+Q',
                 selector: 'terminate:',
-                click () {
+                click() {
                     goodbye();
                 }
             }
@@ -83,7 +83,7 @@ let mainMenu = [
             {
                 label: 'Pause',
                 accelerator: 'Space',
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-toggle');
                 }
@@ -91,7 +91,7 @@ let mainMenu = [
             {
                 label: 'Next',
                 accelerator: 'Right',
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-next');
                 }
@@ -99,7 +99,7 @@ let mainMenu = [
             {
                 label: 'Previous',
                 accelerator: 'Left',
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-previous');
                 }
@@ -107,7 +107,7 @@ let mainMenu = [
             {
                 label: 'Increase Volume',
                 accelerator: 'Up',
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-volume-up');
                 }
@@ -115,7 +115,7 @@ let mainMenu = [
             {
                 label: 'Decrease Volume',
                 accelerator: 'Down',
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-volume-down');
                 }
@@ -123,7 +123,7 @@ let mainMenu = [
             {
                 label: 'Like',
                 accelerator: 'Cmd+L',
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-like');
                 }
@@ -184,42 +184,42 @@ let mainMenu = [
             {
                 label: 'Home',
                 accelerator: 'Cmd+Shift+H',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-home');
                 }
             },
             {
                 label: 'Search',
                 accelerator: 'Cmd+F',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-search');
                 }
             },
             {
                 label: 'Top podcasts',
                 accelerator: 'Cmd+Shift+T',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-top');
                 }
             },
             {
                 label: 'Playlist',
                 accelerator: 'Cmd+Shift+P',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-playlist');
                 }
             },
             {
                 label: 'Made For You',
                 accelerator: 'Cmd+Shift+F',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-fm');
                 }
             },
             {
                 label: 'Downloads',
                 accelerator: 'Cmd+Shift+D',
-                click () {
+                click() {
                     downloader.showDownloader();
                 }
             },
@@ -229,14 +229,14 @@ let mainMenu = [
             {
                 label: 'Menu',
                 accelerator: 'Cmd+Shift+L',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-menu');
                 }
             },
             {
                 label: 'Next Up',
                 accelerator: 'Cmd+P',
-                click () {
+                click() {
                     mainWindow.webContents.send('show-playing');
                 }
             },
@@ -264,13 +264,13 @@ let mainMenu = [
         submenu: [
             {
                 label: 'Bug report 🐛',
-                click () {
+                click() {
                     shell.openExternal('https://github.com/trazyn/ieaseMusic/issues');
                 }
             },
             {
                 label: 'Fork me on Github 🚀',
-                click () {
+                click() {
                     shell.openExternal('https://github.com/trazyn/ieaseMusic');
                 }
             },
@@ -279,7 +279,7 @@ let mainMenu = [
             },
             {
                 label: '💕 Follow me on Twitter 👏',
-                click () {
+                click() {
                     shell.openExternal('https://twitter.com/var_darling');
                 }
             }
@@ -289,19 +289,19 @@ let mainMenu = [
 let trayMenu = [
     {
         label: 'Pause',
-        click () {
+        click() {
             mainWindow.webContents.send('player-toggle');
         }
     },
     {
         label: 'Next',
-        click () {
+        click() {
             mainWindow.webContents.send('player-next');
         }
     },
     {
         label: 'Previous',
-        click () {
+        click() {
             mainWindow.webContents.send('player-previous');
         }
     },
@@ -311,7 +311,7 @@ let trayMenu = [
     {
         label: 'Preferences...',
         accelerator: 'Cmd+,',
-        click () {
+        click() {
             mainWindow.webContents.send('show-preferences');
         }
     },
@@ -320,7 +320,7 @@ let trayMenu = [
     },
     {
         label: 'Toggle main window',
-        click () {
+        click() {
             let isVisible = mainWindow.isVisible();
             isVisible ? mainWindow.hide() : mainWindow.show();
         }
@@ -331,13 +331,13 @@ let trayMenu = [
     {
         label: 'Check for updates',
         accelerator: 'Cmd+U',
-        click () {
+        click() {
             updater.checkForUpdates();
         }
     },
     {
         label: 'Fork me on Github',
-        click () {
+        click() {
             shell.openExternal('https://github.com/trazyn/ieaseMusic');
         }
     },
@@ -347,7 +347,7 @@ let trayMenu = [
     {
         label: 'Toggle DevTools',
         accelerator: 'Alt+Command+I',
-        click () {
+        click() {
             mainWindow.show();
             mainWindow.toggleDevTools();
         }
@@ -359,7 +359,7 @@ let trayMenu = [
         label: 'Quit',
         accelerator: 'Command+Q',
         selector: 'terminate:',
-        click () {
+        click() {
             goodbye();
         }
     }
@@ -368,7 +368,7 @@ let dockMenu = [
     {
         label: 'Toggle Player',
         accelerator: 'Space',
-        click () {
+        click() {
             mainWindow.show();
             mainWindow.webContents.send('player-toggle');
         }
@@ -376,7 +376,7 @@ let dockMenu = [
     {
         label: 'Next',
         accelerator: 'Right',
-        click () {
+        click() {
             mainWindow.show();
             mainWindow.webContents.send('player-next');
         }
@@ -384,7 +384,7 @@ let dockMenu = [
     {
         label: 'Previous',
         accelerator: 'Left',
-        click () {
+        click() {
             mainWindow.show();
             mainWindow.webContents.send('player-previous');
         }
@@ -392,14 +392,14 @@ let dockMenu = [
     {
         label: 'Like',
         accelerator: 'Cmd+L',
-        click () {
+        click() {
             mainWindow.show();
             mainWindow.webContents.send('player-like');
         }
     },
 ];
 
-function updateMenu (playing) {
+function updateMenu(playing) {
     if (!isOsx) {
         return;
     }
@@ -410,7 +410,7 @@ function updateMenu (playing) {
     Menu.setApplicationMenu(menu);
 }
 
-function updateTray (playing) {
+function updateTray(playing) {
     // Update unread mesage count
     trayMenu[0].label = playing ? 'Pause' : 'Play';
 
@@ -433,7 +433,7 @@ function updateTray (playing) {
     tray.setContextMenu(contextmenu);
 }
 
-function registerGlobalShortcut () {
+function registerGlobalShortcut() {
     // Play the next song
     globalShortcut.register('MediaNextTrack', e => {
         mainWindow.webContents.send('player-next');
@@ -470,7 +470,7 @@ const createMainWindow = () => {
         height: 620,
         resizable: true,
         maximizable: true,
-        fullscreenable: false,
+        fullscreenable: true,
         backgroundColor: 'none',
         titleBarStyle: 'hiddenInset',
     });
@@ -523,7 +523,7 @@ const createMainWindow = () => {
             return {
                 label: e.name,
                 accelerator: `Cmd+${index}`,
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-play', {
                         id: e.id,
@@ -537,12 +537,12 @@ const createMainWindow = () => {
     });
 
     // Update next up menu
-    ipcMain.on('update-playing', async (event, args) => {
+    ipcMain.on('update-playing', async(event, args) => {
         var playingMenu = mainMenu.find(e => e.label === 'Next Up');
         var submenu = args.songs.map((e, index) => {
             return {
                 label: e.name,
-                click () {
+                click() {
                     mainWindow.show();
                     mainWindow.webContents.send('player-play', {
                         id: e.id,
@@ -687,6 +687,3 @@ app.on('ready', () => {
         });
     });
 });
-app.on('will-quit', function () {
-    globalShortcut.unregisterAll()
-})
