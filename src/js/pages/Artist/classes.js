@@ -234,7 +234,6 @@ export default theme => ({
             display: '-webkit-box',
             maxWidth: 270,
             flex: .5,
-            fontFamily: 'HelveticaNeue',
             fontSize: 14,
             color: '#654b58',
             whiteSpace: 'normal',

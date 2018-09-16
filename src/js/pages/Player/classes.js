@@ -162,7 +162,6 @@ export default theme => ({
 
     list: {
         flex: 1,
-        fontFamily: 'Roboto',
         color: '#a2a2a2',
 
         '& header': {

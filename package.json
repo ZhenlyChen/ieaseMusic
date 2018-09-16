@@ -143,6 +143,7 @@
     "mobx-react": "^5.2.3",
     "moment": "^2.22.2",
     "node-id3": "^0.1.5",
+    "path": "^0.12.7",
     "perdido": "^2.0.1",
     "prop-types": "^15.6.2",
     "qrcode-js": "0.0.2",

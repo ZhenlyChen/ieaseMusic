@@ -15,6 +15,7 @@ import FadeImage from 'ui/FadeImage';
 import Indicator from 'ui/Indicator';
 import ProgressImage from 'ui/ProgressImage';
 import Controller from 'components/Controller';
+import Header from 'components/Header';
 
 const Status = injectSheet(classes)(
     (props) => {
@@ -301,6 +302,11 @@ class Welcome extends Component {
         return (
             <div className={classes.container}>
                 <Loader show={home.loading} />
+
+                <Header
+                    transparent={true}
+                    showFav={false}
+                />
 
                 <main>
                     <aside className={classes.navs}>

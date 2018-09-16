@@ -20,6 +20,7 @@ import UpNext from 'components/UpNext';
 import Share from 'components/Share';
 
 const classes = {
+
     container: {
         position: 'fixed',
         left: 0,
@@ -142,7 +143,6 @@ class Layout extends Component {
                 >
                     {this.props.children}
                 </main>
-
                 <AudioPlayer />
                 <UpNext />
                 <Share />

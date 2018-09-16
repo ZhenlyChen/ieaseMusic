@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { inject, observer } from 'mobx-react';
 import injectSheet from 'react-jss';
 import clazz from 'classname';
-
 import classes from './classes';
 
 @inject(stores => ({
@@ -34,15 +33,15 @@ class Header extends Component {
     goBack = () => window.history.back()
 
     renderBack() {
-        var { classes, showBack } = this.props;
+        var { showBack } = this.props;
 
         if (!showBack) {
             return false;
         }
 
         return (
-            <span
-                className={classes.backward}
+            <i
+                className="ion-android-arrow-back"
                 onClick={e => this.goBack()}
             />
         );
@@ -92,6 +91,15 @@ class Header extends Component {
             <i
                 className="ion-android-more-vertical"
                 onClick={() => this.props.showMenu()}
+            />
+        );
+    }
+
+    renderClose() {
+        return (
+            <i
+                className="ion-close"
+                onClick={() => window.close()}
             />
         );
     }
@@ -160,6 +168,9 @@ class Header extends Component {
                         }
                         {
                             this.renderMenu()
+                        }
+                        {
+                            this.renderClose()
                         }
                     </div>
                 </section>

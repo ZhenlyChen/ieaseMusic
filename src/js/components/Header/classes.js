@@ -7,6 +7,7 @@ export default theme => ({
         left: 0,
         top: 0,
         zIndex: 99,
+        '-webkit-app-region': 'drag',
 
         '& section': {
             position: 'relative',
@@ -21,6 +22,8 @@ export default theme => ({
         },
 
         '& i': {
+
+            '-webkit-app-region': 'no-drag',
             display: 'inline-block',
             width: 32,
             marginRight: 4,
